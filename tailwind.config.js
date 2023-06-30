@@ -12,9 +12,11 @@ module.exports = {
           dunkel: '#692580',
         },
         'blau': {
-          hell: '#E8EBF7',
-          DEFAULT: '#ACBED8',
-          dunkel: '#4E73A6',
+          stark_hell: '#5CB6FF',
+          hell: '#0A91FF',
+          DEFAULT: '#0072CE',
+          dunkel: '#004F8F',
+          stark_dunkel: '#002D52',
         },
         'gelb': {
           hell: '#F8E8C9',
@@ -28,9 +30,9 @@ module.exports = {
           },
         'hinten': {
           hell: '#fff8f8',
-          stark_dunkel: '#0D0410',
-          dunkel: '#280C31',
-          leicht_dunkel: '#421452',
+          leicht_dunkel: '#212A45',
+          dunkel: '#151B2B',
+          stark_dunkel: '#0B0F17',
         },
       },
     },
