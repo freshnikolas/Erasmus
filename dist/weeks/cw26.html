@@ -35,7 +35,7 @@
       </div>
 
       <p>
-        The first day started a bit chaotic.
+        The first day started off a bit chaotic.
         Let me sum it up for you:
         <br><br>
         <ul>
@@ -49,16 +49,20 @@
           <li>- I arrived but waited at the wrong entrance for half an hour until somebody picked me up</li>
         </ul>
 
-        <br><img src="../images/cw26/cw26_1.jpg" alt="my way to work on the first day">
-        <img src="../images/cw26/cw26_2.jpg" alt="my way to work on the first day">
+        <!-- doesn't work -->
+        <div class="relative rounded-lg text-center overflow-hidden w-5 sm:w-5 mx-auto">
+          <br><img class="relative z-10 object-scale-down h-5 w-full" src="../images/cw26/cw26_1.jpg" alt="my way to work on the first day">
+          <img src="../images/cw26/cw26_2.jpg" alt="my way to work on the first day">
+        </div>
 
         <br>After this bumpy start and filling out the learning agreement I could finally start my first day at work.
         <br>My first task was to set up my work space.
         <br>First I got to build my own desk, which was still in it's original IKEA packaging waiting eagerly to be assembled.
+        
         <br><br>After assembling the desk I needed to equip my desk with the needed hardware. 
         <br>I decided to use an old computer to set up and install Linux on it.
         <br>For this I decided to use Ubuntu and connect to it via a SSH connection.
-        <br>After some hickups because of the long download time because of the slow WiFi connection, the file size limitation of FAT32 filesystems not allowing me to put the installation installation image on itself and my general inexperience installing Linux on a new system the Hardware and the OS stood ready by the end of the day for use.
+        <br>After some hickups because of the long download time because of the slow WiFi connection, the file size limitation of FAT32 filesystems not allowing me to put the installation image on itself and my general inexperience installing Linux on a new system the Hardware and the OS stood ready by the end of the day for use.
         
         <br><br>After my work for the day was concluded, I drove back into the old town, this time with the bus which took only half an hour.
         <br>I realized Google Maps was showing me only train connections because of some settings I did a long time ago, which only allowed for train connections.
@@ -69,10 +73,7 @@
     </section><br>
 
 
-<!-- Wrapper -->
-<div class="max-w-screen-lg mx-auto pt-10 pb-10">
-
-  <!-- Regarding the transport card -->
+<!-- Regarding the transport card -->
   <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
     <div class="flex mb-5 ">
       <div class="w-6 mr-3 bg-blau-hell"></div>
@@ -85,5 +86,38 @@
   </section><br>
 
 
+  <!-- Installing Nunavut -->
+  <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+    <div class="flex mb-5 ">
+      <div class="w-6 mr-3 bg-blau-hell"></div>
+      <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Installing Nunavut</h2>
+    </div>
+
+    <p>
+      During the coming days my work at the opensource repositories of <a href="https://github.com/OpenCyphal/nunavut">Nunavut</a> and <a href="https://github.com/OpenCyphal/nunaweb">Nunaweb</a> would start.
+      <br>First by reading the documentation to both of them, as they make up a substential part of the work the company I work at, does.
+      <br>Nunaweb is a webapplication which is powered by Nunavut. Through those applications which compile <a href="https://opencyphal.org/">OpenCyphal DSDL</a> definitions into <a href="https://palletsprojects.com/p/jinja/">Jinja2</a> templates, code, schemas, metadata, documentation, etc. can be generated.
+      
+      <br><br>I started by downloading, installing and setting up Nunavut, <a href="https://github.com/OpenCyphal/pydsdl">pydsdl</a> and all further needed software.
+      <br>In beforehand I set up a SSH connection through Visual Studio Code on my personal Laptop to the Linux PC.
+      <br>That turned out to be a bigger hassle which wouldn't be worth it. Every further action will be taken directly on the Ubuntu system.
+      <br>I tested if everything worked properly by cloning the <a href="https://github.com/OpenCyphal/public_regulated_data_types">public_regulated_data_types</a> repo (Repository) and generating my first documentation with the help of Nunavut, using the following command:
+      <br><br>nnvg --experimental-languages --target-language html public_regulated_data_types/reg --lookup-dir public_regulated_data_types/uavcan
+      nnvg --experimental-languages --target-language html public_regulated_data_types/uavcan
+    </p>
+  </section><br>
+
+
+<!-- Strolling through old town -->
+  <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+    <div class="flex mb-5 ">
+      <div class="w-6 mr-3 bg-blau-hell"></div>
+      <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Strolling through old town</h2>
+    </div>
+
+    <p>
+      coming soon :)
+    </p>
+  </section><br>
 </body>
 </html>
