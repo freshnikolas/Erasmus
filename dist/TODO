@@ -1,3 +1,4 @@
 Tere counter
-unterscheiden zwischen tangent und main story line durch überschriften und farben
-kleines Datum in den section boxen unten rechts einfügen
+unterscheiden zwischen tangent und main storyline durch überschriften und farben
+kleines Datum und ueberschrift in den section boxen unten rechts einfügen
+transform fuer <body> einfuegen, damit wenn groesse sich veraendert alles smooth ablaeuft
