@@ -31,7 +31,7 @@
     <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
       <div class="flex mb-5 ">
         <div class="w-6 mr-3 bg-blau-hell"></div>
-        <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">The first day</h2>
+        <h2 class="text-2xl font-bold pb-1 md:w-2/5 border-b-4 border-black">The first day</h2>
       </div>
 
       <p>
@@ -50,12 +50,12 @@
         </ul>
 
         <!-- doesn't work -->
-        <div class="relative rounded-lg text-center overflow-hidden w-5 sm:w-5 mx-auto">
-          <br><img class="relative z-10 object-scale-down h-5 w-full" src="../images/cw26/cw26_1.jpg" alt="my way to work on the first day">
-          <img src="../images/cw26/cw26_2.jpg" alt="my way to work on the first day">
+        <div class="columns-1 md:columns-2 pt-6">
+            <img class="object-cover rounded-lg md:h-96 pb-6" src="../images/cw26/cw26_1.jpg" alt="my way to work on the first day">
+            <img class="object-cover rounded-lg md:h-96 pb-6" src="../images/cw26/cw26_2.jpg" alt="my way to work on the first day">
         </div>
 
-        <br>After this bumpy start and filling out the learning agreement I could finally start my first day at work.
+        After this bumpy start and filling out the learning agreement I could finally start my first day at work.
         <br>My first task was to set up my work space.
         <br>First I got to build my own desk, which was still in it's original IKEA packaging waiting eagerly to be assembled.
         
@@ -102,6 +102,7 @@
       <br>In beforehand I set up a SSH connection through Visual Studio Code on my personal Laptop to the Linux PC.
       <br>That turned out to be a bigger hassle which wouldn't be worth it. Every further action will be taken directly on the Ubuntu system.
       <br>I tested if everything worked properly by cloning the <a href="https://github.com/OpenCyphal/public_regulated_data_types">public_regulated_data_types</a> repo (Repository) and generating my first documentation with the help of Nunavut, using the following command:
+      
       <br><br>nnvg --experimental-languages --target-language html public_regulated_data_types/reg --lookup-dir public_regulated_data_types/uavcan
       nnvg --experimental-languages --target-language html public_regulated_data_types/uavcan
     </p>
@@ -117,6 +118,61 @@
 
     <p>
       coming soon :)
+    </p>
+  </section><br>
+
+
+  <!-- Setting up Nunaweb -->
+  <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+    <div class="flex mb-5 ">
+      <div class="w-6 mr-3 bg-blau-hell"></div>
+      <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Setting up Nunaweb</h2>
+    </div>
+
+    <p>
+      After I installed Nunavut, I continued with setting up <a href="https://github.com/OpenCyphal/nunaweb">Nunaweb</a>.
+      <br>The setup of Nunaweb is split up in two sections, the frontend and the backend.
+      <br>Regardless with which you want to start you first have to clone the repo.
+      <br>I started with the frontend by first swichting into the /Nunaweb directory.
+      <br>Then I installed it and tried to run it by using the following comannds:
+
+      <br><br>npm install
+      <br>npm run dev
+
+      <br><br>The backend runns with the help of Docker and Docker Compose.
+      <br>Docker is an open-source platform that enables the creation, distribution, and running of applications using containers, providing a consistent and efficient environment across different systems.
+      <br>Docker Compose is a tool that allows you to define and manage multi-container applications, specifying the dependencies and configuration of each container in a YAML file.
+      <br>I had some difficulties with getting Docker Compose to run but after realizing I just needed to install Docker Engine, which is a platform that allows you to build, run, and manage containers and not the Docker Desktop application it finally worked. :D
+    </p>
+  </section><br>
+
+
+<!-- K-Space -->
+    <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+      <div class="flex mb-5 ">
+        <div class="w-6 mr-3 bg-blau-hell"></div>
+        <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">K-Space</h2>
+      </div>
+  
+      <p>
+        During break time or when getting tee I had the opportunity to look at the community project of the techno campus.
+        <br>K-Space is a group of young people interested in IT, electronics, retro gaming and other technical things.
+        <br>They have their own chanel on <a href="https://www.youtube.com/@k-space-ee">Youtube</a> in which they talk about a varriaty of .
+        <br>Zubax is part of this community 
+      </p>
+    </section><br>
+  </body>
+  </html>
+
+  <!-- Updating Nunaweb -->
+  <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+    <div class="flex mb-5 ">
+      <div class="w-6 mr-3 bg-blau-hell"></div>
+      <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Updating Nunaweb</h2>
+    </div>
+
+    <p>
+      TODO
     </p>
   </section><br>
 </body>
