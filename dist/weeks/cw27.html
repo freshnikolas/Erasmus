@@ -27,17 +27,55 @@
 <!-- Wrapper -->
   <div class="max-w-screen-lg mx-auto pt-10 pb-10">
 
-  <!-- Updating Nunaweb -->
-  <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
-    <div class="flex mb-5 ">
-      <div class="w-6 mr-3 bg-blau-hell"></div>
-      <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Updating Nunaweb</h2>
-    </div>
 
-    <p>
-      TODO
-    </p>
-  </section><br>
+<!-- Errorfixing regarding Nunaweb -->
+    <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+      <div class="flex mb-5 ">
+        <div class="w-6 mr-3 bg-blau-hell"></div>
+        <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Errorfixing regarding Nunaweb</h2>
+      </div>
+
+      <p>
+        Before I could start working on a new project, I had first to do some fixing regarding errors that were made during the Nunaweb installation and setup process in the previous week.
+        After that I recieved several small tasks, such as fixing wrong indents which were caused by a faulty html skript generation or missing API-keys for the html subriectories which were generated on a offical server.
+        <br>For the missing API-keys I did several small tests over the day, which included:
+        <ul class="pt-2 pl-2">
+          <li>- Tested if error occurred if error was generated locally and not on the server
+            <li class="pl-4">-> error did not occur</li>
+          </li>
+          <li>- Error message showed that the key should lie under docs/uavcan/uavcan but this directory was deleted after a successful generation</li>
+          <li>- Locally it worked
+            <li class="pl-4">-> No API is beeing called into action because everything is beeing done locally</li>
+          </li>
+        </ul>
+
+        <br>Soon we realized that fixing those small problems required an update of the Nunavut version inside of Nunaweb, which would be my next task for the week.
+      </p>
+      <br><p class="text-right italic text-sm">Monday-Tuesday, July 3th-4th</p>
+    </section><br>
+
+<!-- Updating Nunaweb -->
+    <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
+      <div class="flex mb-5 ">
+        <div class="w-6 mr-3 bg-blau-hell"></div>
+        <h2 class="text-2xl font-bold pb-1 w-2/5 border-b-4 border-black">Updating Nunaweb</h2>
+      </div>
+
+      <p>
+        Updating Nunaweb required the rewirting of some modules, espacially the <a href="https://github.com/OpenCyphal/nunaweb/blob/main/nunaserver/nunaserver/generator.py">_generators.py</a> inside of Nunaweb.
+        <br>The steps I took during this week go as follows:
+        <ul class="pt-2 pl-2">
+          <li>- Fixing the version of python which is beeing used for this project (changed from newest to python 3.9)</li>
+          <li>- Corrected imports for _generators.py</li>
+          <li>- fixed the initialization of several methods and their arguments</li>
+          <li>- rewirting parts of the def _generate_dsdl method</li>
+        </ul>
+        
+        <br>At the end of the week I still haven't managed to get the newest version of Nunavut inside of Nunaweb running.
+      </p>
+      
+      <br><p class="text-right italic text-sm">Wednesday-Friday, July 5th-7th</p>
+    </section><br>
 
 
   </div>
