@@ -2,6 +2,5 @@ Tere counter
 unterscheiden zwischen tangent und main storyline durch überschriften und farben
 transform fuer <body> einfuegen, damit wenn groesse sich veraendert alles smooth ablaeuft
 navigation Pfeile unten einfügen
-Überschriften bei kleinem format komplette breite ausnutzen lassen
 Darstellung von Listenelementen zerfällt auf kleinformatdisplays (evtl. grid system für - und für text?)
 Besseres Icon als "-" für Listenelemente
