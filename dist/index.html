@@ -9,24 +9,19 @@
   <link rel="stylesheet" href="custom.css">
 </head>
 
-<!-- Colourtheme der Website -->
+<!-- Body -->
 <body class="bg-white dark:bg-hinten-dunkel dark:text-white">
 
-
 <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
-    <section class="px-8 py-4 max-w-screen-lg mx-auto">
-      <div class="w-3/4">
-        <a href="index.html"><h1 class="text-3xl font-bold">Erasmus Blog</h1></a>
-        <p>My internship abroad in Estonia</p>
-      </div>
-    </section>
-  </header>
-
+<header id="header"></header>
 
 <!-- Wrapper -->
   <div class="max-w-screen-lg mx-auto pt-10 pb-10">
 
+
+
+
+<!-------------------------------- Inhalte -------------------------------->
 
 <!-- Vorwort -->
     <section class="p-8 dark:bg-hinten-leicht_dunkel rounded-3xl">
@@ -63,6 +58,7 @@
           <a href="./weeks/cw27.html" class="p-4 rounded-lg shadow-lg card">CW 27</a>
           <a href="./weeks/cw28.html" class="p-4 rounded-lg shadow-lg card">CW 28</a>
           <a href="./weeks/cw29.html" class="p-4 rounded-lg shadow-lg card">CW 29</a>
+          <a href="./weeks/cw30.html" class="p-4 rounded-lg shadow-lg card">CW 30</a>
         </div>
 
         <h3 class="text-xl font-bold pt-5">August</h3>
@@ -72,6 +68,18 @@
 
     </div>
   </div>
+
+
+
+
+<!-------------------------------- Scripts -------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#header").load("header.html");
+  });
+</script>
 
 </body>
 </html>
