@@ -5,27 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erasmus Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../custom.css">
 </head>
 
-<!-- Colourtheme der Website -->
+
+
+
+<!-- Body -->
 <body class="bg-white dark:bg-hinten-dunkel dark:text-white">
 
-
 <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
-    <section class="px-8 py-4 max-w-screen-lg mx-auto">
-      <div class="w-3/4">
-        <a href="../index.html"><h1 class="text-3xl font-bold">Erasmus Blog</h1></a>
-        <p>My internship abroad in Estonia</p>
-      </div>
-    </section>
-  </header>
-
+<header class="sticky top-0" id="header"></header>
 
 <!-- Wrapper -->
-  <div class="max-w-screen-lg mx-auto pt-10 pb-10">
+<div class="max-w-screen-lg mx-auto pt-10 pb-10">
+
+
 
 
 <!-- Errorfixing regarding Nunaweb -->
@@ -98,7 +97,66 @@
     </section><br>
 
 
-  </div>
+<!-- NavButtons -->
+<button class="p-4 rounded-lg shadow-lg card bg-karte-hell dark:bg-karte-dunkel" id="lastcw">previous cw</button>
+<button class="p-4 rounded-lg shadow-lg card bg-karte-hell dark:bg-karte-dunkel" id="nextcw">next cw</button>
+
+</div>
+
+
+
+
+<!-------------------------------- Scripts -------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $("#header").load("../header.html");
+    });
+</script>
+
+
+<script>
+// NAVIGATION BUTTONS
+// String: "cwxx.html" -> Int: xx
+  function getPageInt() {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    
+    var regexPattern = /cw(\d+)\.html/;
+    var match = regexPattern.exec(page);
+    
+    var pageAsInteger = parseInt(match[1], 10);
+    
+    return pageAsInteger;
+  }
+
+// Int: xx +- direction
+  function navigatePage(direction) {
+    var direction = direction;
+    var page = getPageInt() + direction;
+
+    return page;
+  }
+
+// Int xx -> // String: "cwxx.html"
+  function setPageString(page) {
+    page = page.toString();
+    page = "cw" + page + ".html";
+
+    return page;
+  }
+
+  // buttons
+  lastcw.addEventListener("click", () => {
+    window.location.href = setPageString(navigatePage(-1))
+  });
+  nextcw.addEventListener("click", () => {
+    window.location.href = setPageString(navigatePage(1))
+  });
+</script>
 
 </body>
 </html>

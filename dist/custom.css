@@ -1,5 +1,6 @@
 body {
   border-radius: 5px;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -13,13 +14,26 @@ body {
   background-color: #AAAAAA;
 }
 
+header {
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+div, p, ul, ol {
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  transition: 0.3s;
+}
+
 .card {
-  background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 
 .card:hover {
   cursor: pointer;
+  border: 1px solid #0A91FF;
 }
 
 .card:hover::before {
