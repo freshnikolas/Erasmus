@@ -31,6 +31,10 @@ module.exports = {
           hell: '',
           dunkel: '#252E49',
         },
+        'karte': {
+          hell: '',
+          dunkel: '#252E49',
+        },
       },
     },
   darkMode: 'class',
