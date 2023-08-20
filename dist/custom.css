@@ -3,6 +3,14 @@ body {
   scroll-behavior: smooth;
 }
 
+header a {
+  color: #ededee;
+}
+
+a {
+  color: #5CB6FF;
+}
+
 ::-webkit-scrollbar {
   width: 18px;
 }
@@ -29,6 +37,7 @@ section {
 .card {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
+  color: #ededee;
 }
 
 .card:hover {
