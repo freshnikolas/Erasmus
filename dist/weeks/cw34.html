@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="dark" lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erasmus Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../custom.css">
+</head>
+
+
+
+
+<!-- Body -->
+<body class="bg-hinten-dunkel text-white">
+
+<!-- Header -->
+  <header class="sticky top-0" id="header"></header>
+
+<!-- Wrapper -->
+  <div class="max-w-screen-lg mx-auto pt-10 pb-10">
+
+
+
+
+<!-------------------------------- Inhalte -------------------------------->
+
+<!-- TITLE -->
+<section class="p-8 bg-hinten-leicht_dunkel shadow-md hover:shadow-lg shadow-black hover:shadow-blau-dunkel rounded-3xl">
+  <div class="flex mb-5 overflow-visible">
+    <div class="w-6 mr-3 bg-blau-hell"></div>
+    <h2 class="text-2xl font-bold pb-1 w-full border-b-4 border-black">Title</h2>
+  </div>
+
+  <p>
+    TODO
+  </p>
+
+  <br><p class="text-right italic text-sm">Monday-Tuesday, July 3th-4th</p>
+</section><br>
+
+
+<!-- NavButtons -->
+<button class="p-4 rounded-lg shadow-lg card bg-karte-hell bg-karte-dunkel" id="lastcw">previous cw</button>
+<button class="p-4 rounded-lg shadow-lg card bg-karte-hell bg-karte-dunkel" id="nextcw">next cw</button>
+
+</div>
+
+
+
+
+<!-------------------------------- Scripts -------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $("#header").load("../header.html");
+    });
+</script>
+
+
+<script>
+// NAVIGATION BUTTONS
+// String: "cwxx.html" -> Int: xx
+  function getPageInt() {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    
+    var regexPattern = /cw(\d+)\.html/;
+    var match = regexPattern.exec(page);
+    
+    var pageAsInteger = parseInt(match[1], 10);
+    
+    return pageAsInteger;
+  }
+
+// Int: xx +- direction
+  function navigatePage(direction) {
+    var direction = direction;
+    var page = getPageInt() + direction;
+
+    return page;
+  }
+
+// Int xx -> // String: "cwxx.html"
+  function setPageString(page) {
+    page = page.toString();
+    page = "cw" + page + ".html";
+
+    return page;
+  }
+
+  // buttons
+  lastcw.addEventListener("click", () => {
+    window.location.href = setPageString(navigatePage(-1))
+  });
+  nextcw.addEventListener("click", () => {
+    window.location.href = setPageString(navigatePage(1))
+  });
+</script>
+
+</body>
+</html>
